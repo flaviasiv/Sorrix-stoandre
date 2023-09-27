@@ -8,20 +8,21 @@ toggleButton.addEventListener('click', () => {
 
 //ler mais/ler menos btn
 function myFunction(){
-    var dots = document.getElementById("dots");
-    var moreText = document.getElementById("more");
-    var btnText = document.getElementById("myBtn");
-  
-    if (dots.style.display === "none") {
-      dots.style.display = "inline";
-      btnText.innerHTML = "Ler mais";
-      moreText.style.display = "none";
-    } else {
-      dots.style.display = "none";
-      btnText.innerHTML = "Ler menos";
-      moreText.style.display = "inline";
-    }
+  var dots = document.getElementById("dots-dep");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Ler mais";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Ler menos";
+    moreText.style.display = "inline";
+  }
 }
+
 //// When the user scrolls the page, execute myFunction
 //window.onscroll = function() {myFunction()};
 //
@@ -145,9 +146,9 @@ function showSlides(n) {
 //slider2
 const slider = document.querySelector(".carousel"),
 firstImg = slider.querySelectorAll("img")[0],
-arrowIcons = document.querySelectorAll(".fa-solid");
+arrowIcons = document.querySelectorAll(".wrapper i");
 
-let isDragStart = false, prevPageX, prevScrollLeft, positionDiff;
+let isDragStartt = false, prevPageX, prevScrollLeft, positionDiff;
 
 const showHideIcons = () => {
     // showing and hiding prev/next icon according to slider scroll left value
@@ -181,6 +182,35 @@ const autoSlide = () => {
     slider.scrollLeft -= positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
 }
 
+const dragStartt = (e) => {
+  // updatating global variables value on mouse down event
+  isDragStartt = true;
+  prevPageX = e.pageX || e.touches[0].pageX;
+  prevScrollLeft = slider.scrollLeft;
+}
+const draggingg = (e) => {
+  // scrolling images/slider to left according to mouse pointer
+  if(!isDragStartt) return;
+  e.preventDefault();
+  isDragging = true;
+  slider.classList.add("dragging");
+  positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
+  slider.scrollLeft = prevScrollLeft - positionDiff;
+  showHideIcons();
+}
+const dragStopp = () => {
+  isDragStartt = false;
+  slider.classList.remove("dragging");
+  if(!isDragging) return;
+  isDragging = false;
+  autoSlide();
+}
+slider.addEventListener("mousedown", dragStartt);
+slider.addEventListener("touchstart", dragStartt);
+document.addEventListener("mousemove", draggingg);
+slider.addEventListener("touchmove", draggingg);
+document.addEventListener("mouseup", dragStopp);
+slider.addEventListener("touchend", dragStopp);
 
 //slder 3 
 
