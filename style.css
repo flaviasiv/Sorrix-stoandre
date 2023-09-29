@@ -634,6 +634,12 @@ scroll-behavior:smooth
     .carousel img{
         width: calc(100% / 1);
     }
+    #prev2 {
+        left: 2%;
+    }
+    #next2 {
+        right: 2%;
+    }
 }
 
 #agende{
@@ -856,12 +862,74 @@ scroll-behavior:smooth
     display: block;
     width: 450px;
     border-radius: 10px;
-    box-shadow: 0px 0px 2px 0px #6a468c63, 0px 0px 52px 0px #6a468ce0;
+    box-shadow: 0px 0px 32px 0px #6a468c63, 0px 0px 32px 0px #6a468ce0;
 }
-
-
-
-
+@media screen and (max-width: 750px) {
+    .sobre{
+        flex-direction: column;
+        padding: 50px 10px;
+    }
+    .sobre p {
+        padding-bottom: 30px;
+    }
+    .sobre img{
+        width: 100%;
+        max-width: 300px;
+        margin: auto;
+    }
+}
+.contato{
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 100px 0;
+}
+.contato iframe{
+    justify-content: right;
+    max-width: 500px;
+}
+.contatolist{
+    margin: auto;
+}
+.contatolist h2{
+    color: #6A468C;
+    padding: 0 0 20px 0;
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+.contato ul{
+    list-style: none;
+}
+.contato ul li{
+    font-size: 18px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    margin-right: 40px;
+}
+.contato ul li a{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: #000;
+}
+.contato ul li svg{
+    margin-right: 8px;
+}
+@media screen and (max-width: 700px) {
+    .contato{
+        flex-direction: column;
+        padding: 50px 5px;
+    }
+    .contato iframe{
+        justify-content: center;
+        max-width: 300px;
+    }    
+}
 
 
 
