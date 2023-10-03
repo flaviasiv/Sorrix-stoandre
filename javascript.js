@@ -6,47 +6,12 @@ toggleButton.addEventListener('click', () => {
   navbarLinks.classList.toggle('active')
 })
 
-//ler mais/ler menos btn
-function myFunction(){
-  var dots = document.getElementById("dots-dep");
-  var moreText = document.getElementById("more");
-  var btnText = document.getElementById("myBtn");
-
-  if (dots.style.display === "none") {
-    dots.style.display = "inline";
-    btnText.innerHTML = "Ler mais";
-    moreText.style.display = "none";
-  } else {
-    dots.style.display = "none";
-    btnText.innerHTML = "Ler menos";
-    moreText.style.display = "inline";
-  }
-}
-
-//// When the user scrolls the page, execute myFunction
-//window.onscroll = function() {myFunction()};
-//
-//// Get the header
-//var header = document.getElementById("home");
-//
-//// Get the offset position of the navbar
-//var sticky = header.offsetTop;
-//
-//// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-//function myFunction() {
-//  if (window.pageYOffset > sticky) {
-//    header.classList.add("sticky");
-//  } else {
-//    header.classList.remove("sticky");
-//  }
-//}
-//
 //slider1 
 
 const wrapper = document.querySelector(".container");
 const carousel = document.querySelector(".slider-wrapper");
-const arrowsBtns = document.querySelectorAll("arrowSlider"); //botoes
-const firstCardWidth = carousel.querySelector(".slider img").offsetWidth;
+const arrowsBtns = document.querySelectorAll(".slider-wrapper i"); //botoes
+const firstCardWidth = carousel.querySelector(".slider").offsetWidth;
 const carouselChildrens = [...carousel.children];
 
 let isDragging = false, startX, startScrollLeft, timeoutId;
@@ -115,32 +80,8 @@ carousel.addEventListener("scroll", infiniteScroll);
 wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
 wrapper.addEventListener("mouseleave", autoPlay);
 
-var slideIndex = 1;
-showSlides(slideIndex);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("slider");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
 
 
 //slider2
@@ -159,9 +100,9 @@ const showHideIcons = () => {
 
 arrowIcons.forEach(icon => {
     icon.addEventListener("click", () => {
-        let firstImgWidth = firstImg.clientWidth + 14; // getting first img width & adding 14 margin value
+        let firstImgWidthh = firstImg.clientWidth + 14; // getting first img width & adding 14 margin value
         // if clicked icon is left, reduce width value from the slider scroll left else add to it
-        slider.scrollLeft += icon.id === "left" ? -firstImgWidth : firstImgWidth;
+        slider.scrollLeft += icon.id === "left" ? -firstImgWidthh : firstImgWidthh;
         setTimeout(() => showHideIcons(), 60); // calling showHideIcons after 60ms
     });
 });
@@ -171,15 +112,15 @@ const autoSlide = () => {
     if(slider.scrollLeft - (slider.scrollWidth - slider.clientWidth) > -1 || slider.scrollLeft <= 0) return;
 
     positionDiff = Math.abs(positionDiff); // making positionDiff value to positive
-    let firstImgWidth = firstImg.clientWidth + 14;
+    let firstImgWidthh = firstImg.clientWidth + 14;
     // getting difference value that needs to add or reduce from slider left to take middle img center
-    let valDifference = firstImgWidth - positionDiff;
+    let valDifference = firstImgWidthh - positionDiff;
 
     if(slider.scrollLeft > prevScrollLeft) { // if user is scrolling to the right
-        return slider.scrollLeft += positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
+        return slider.scrollLeft += positionDiff > firstImgWidthh / 3 ? valDifference : -positionDiff;
     }
     // if user is scrolling to the left
-    slider.scrollLeft -= positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
+    slider.scrollLeft -= positionDiff > firstImgWidthh / 3 ? valDifference : -positionDiff;
 }
 
 const dragStartt = (e) => {
@@ -211,6 +152,10 @@ document.addEventListener("mousemove", draggingg);
 slider.addEventListener("touchmove", draggingg);
 document.addEventListener("mouseup", dragStopp);
 slider.addEventListener("touchend", dragStopp);
+
+//form
+
+
 
 //slder 3 
 
