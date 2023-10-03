@@ -89,7 +89,7 @@ header{
     align-items: center;
     background-color: green;
     border-radius: 10px;
-    width: 190px;
+    width: 199px;
     height: 50px;
     padding: 8px 8px 8px 8px;
 }
@@ -160,7 +160,7 @@ header{
     width: 100%;
     max-width: 1900px;
     margin: auto;
-    max-height:700px;
+    max-height:600px;
     align-content: end;
     overflow: hidden;
     scroll-behavior: smooth;
@@ -173,11 +173,12 @@ header{
     scrollbar-width:0;
 }
 .slider{
+    background-color: #6A468C;
     flex: 1 0 100%;
     position:relative;
     width:100%;
     justify-content:center;
-    cursor: pointer;
+    cursor: grab;
     align-content:center;
 }
 .slider-wrapper::-webkit-scrollbar {
@@ -194,22 +195,45 @@ scroll-behavior:smooth
 
 .slider img{
     display: flex;
+    bottom: 0;
     width: 100%;
     object-fit: cover;
-    max-height: 500px;
+    max-height: 600px;
     z-index: -1;
     overflow-x:hidden;
     scroll-snap-type:x mandatory;
     scroll-behavior:smooth;
 }
-.slider p{
+.slider p, .slider p, .slider p{
     position: absolute;
-    top: 0;
-    left: 0;
+    max-width: 250px;
+    top: 20%;
+    left: 20%;
     bottom: 0;
     right: 0;
-    font-size: 20px;
+    color: #FFF;
+    font-size: 35px;
+    font-weight: 900;
 }
+.slider p span{
+    font-size: 25px;
+    font-weight: 500;
+}
+.slider button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    background-color: green;
+    border: 1px solid #6A468C;
+    border-radius: 10px;
+    width: 250px;
+    padding: 10px;
+}
+.slider button a{
+    color: white;
+    font-size: 18px;
+    text-decoration: none;}
 #arrowSlider{
     position: absolute;
     display: flex;
@@ -246,6 +270,27 @@ scroll-behavior:smooth
     cursor: pointer;
 }
 @media screen and (max-width: 580px) {
+    .slider p, .slider p, .slider p{
+        top: 10%;
+        left: 10%;
+        font-size: 18px;
+        font-weight: 800;
+    }
+    .slider p span{
+        font-size: 15px;
+        font-weight: 400;
+    }
+    .slider button{
+        margin-top: 25px;
+        width: 150px;
+        padding: 5px;
+    }
+    #btnslider2{
+        margin-top: 10px;
+
+    }
+    .slider button a{
+        font-size: 14px;}
     
 }
 
