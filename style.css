@@ -419,7 +419,7 @@ scroll-behavior:smooth
     height: 800px;
     justify-content: center;
     
-    background-image: url(./assets/dentista-apontando.jpg);
+    background-image: url(./sorrix_diferenciais_background_01.png);
     opacity: 1;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -766,6 +766,8 @@ scroll-behavior:smooth
     width: 100%;
     max-width: 1200px;
     margin: auto;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
 }
 .slider3{
@@ -826,7 +828,7 @@ scroll-behavior:smooth
         font-size: 12px;
     }
     .slider3-wrapper .slider3{
-        width: 180px;
+        width: 170px;
         height: 270px;
         margin-left: 10px;    
         margin-bottom: 10px;
@@ -845,11 +847,7 @@ scroll-behavior:smooth
     .slider3 p{
         top: 125;
         font-size: 16px;
-    }
-    #CI{
-        top:130;
-    }
-    
+    }    
 }
 #sobre{
     width: 100%;
@@ -886,8 +884,12 @@ scroll-behavior:smooth
         flex-direction: column;
         padding: 50px 10px;
     }
-    .sobre p {
+    .sobre p, .sobre p span {
+        padding-right: 0px;
         padding-bottom: 30px;
+        text-align: center;
+        justify-content: center;
+        margin: auto;
     }
     .sobre img{
         width: 100%;
@@ -940,7 +942,7 @@ scroll-behavior:smooth
 @media screen and (max-width: 700px) {
     .contato{
         flex-direction: column;
-        padding: 50px 5px;
+        padding: 50px 19px;
     }
     .contato iframe{
         align-items: center;
@@ -965,6 +967,8 @@ footer{
 }
 .footercontainer .logo{
     width: 250px;
+    margin: auto;
+    height: 380px;
     padding: 40px 10px 40px 0;
 }
 .footercontainer .logo img{
@@ -1021,10 +1025,9 @@ footer{
     width: 100%;
     line-height: 1.5;
 }
-
-
 .form{
-    width: 250px;
+    width: 290px;
+    justify-content: right;
     margin: auto;
     height: 300px;
 }
@@ -1058,77 +1061,40 @@ footer{
     background-color: #33333356;
 
 }
+@media screen and (max-width: 750px) {
+    .footercontainer{
+        flex-direction: column;
+    }
+    /*.footercontainer .logo, .footercontainer .menufooter, .contatofooter, .form{
+        max-height: 200px;
+        padding: 0;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }*/
+    .footercontainer .logo{
+        max-height: 200px;
+        padding: 0;
+        padding-top: 10px;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .footercontainer .menufooter{
+        width: 250px;
+        max-height: 280px;
+        padding: 0;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .footercontainer .contatofooter{
+        max-height: 150px;
+        padding: 0;
+        padding-top: 10px;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
 
-
-
-
-
-/*.slider2 img{
-    width: 100%;
-    max-width: 2900px;
-    object-fit: cover;
+    }
 }
-.slider2 a {
-    flex: 1 0 100%;
-    scroll-snap-align: start;
-    scroll-snap-type: none;
-    object-fit: cover;
-}
-
-.slider2-nav{
-    display: flex;
-    column-gap: 0.5rem;
-    position: absolute;
-    bottom: 3.8rem;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-}
-
-.slider2::-webkit-scrollbar{
-    display: none;
-}
-
-.slider2.dragging .sliderimg{
-    cursor: grab;
-    user-select: none;
-}
-
-.slider2.no-transition{
-    scroll-behavior: auto;
-}
-.slider2-nav a{
-    width: 0.6rem;
-    height: 0.6rem;
-    border-radius: 50%;
-    background-color: #d5d3d3;
-    opacity: 0.75;
-    transition: opacity ease 2s;
-}
-
-.slider2-nav a:hover{
-    opacity: 1;
-    background-color: #FFF;
-    cursor: pointer;
-}
-
-#arrowSlider2{
-    position: absolute;
-    height: 50px;
-    width: 50px;
-    text-align: center;
-    font-size: 40px;
-    font-weight: 300;
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
-    border-radius: 50%;
-    cursor: pointer;
-    top: 40%;
-    cursor: pointer;
-}
-#arrowSlider2:first-child{
-    left: 5%;
-}
-#arrowSlider2:last-child{
-    right: 5%;
-}*/
