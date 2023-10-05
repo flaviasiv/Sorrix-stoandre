@@ -535,7 +535,8 @@ scroll-behavior:smooth
     max-width: 350px;
     margin: auto;
     justify-content: center;
-    align-items: center;}
+    align-items: center;
+}
 #gridcard-dif {
     margin-left: 0;
     width: 330px;
@@ -866,10 +867,10 @@ scroll-behavior:smooth
 .sobre p {
     padding-right: 40px;
     line-height: 1.5;
-    font-size: 16px;
+    font-size: 22px;
 }
 .sobre p span{
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 800;
     font-style: normal;
 }
@@ -883,6 +884,9 @@ scroll-behavior:smooth
     .sobre{
         flex-direction: column;
         padding: 50px 10px;
+    }
+    .sobre p{
+        font-size: 20;
     }
     .sobre p, .sobre p span {
         padding-right: 0px;
