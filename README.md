@@ -22,7 +22,7 @@
 <p float="left" align="center"> <img alt="Imagem da area de contato com link maps" title="area de contato com link maps" src="https://i.ibb.co/QKbXW7D/Captura-de-tela-2023-10-06-120636.png" height="400" /> <img alt="Imagem da responsividade do segundo carrossel" title="responsividade da página projetos" src="https://i.ibb.co/bdX1k47/1696606804464.jpg" height="400" /> </p>
 
 ## Como os usuários podem achá-lo :computer:
-<p align="center">O site tem o domínio de <a href="#"></a> e pode ser achado facilmente em site de pesquisas como Google pesquisando o nome da franquia :mag:. 
+<p align="center">O site tem o domínio de <a href="#"></a>, está linkado na bio das redes sociais ad franqui e pode ser achado facilmente em site de pesquisas como Google pesquisando o nome da franquia :mag:. 
 
 ## Onde os usuários podem encontrar ajuda sobre seu projeto; :paw_prints:
 <p>Para qualquer ajuda, esclarecimento ou interesse em jobs pode me contatar por <a href="github.com/flaviasiv" Target="_blank">aqui mesmo</a>, ou me mandar um <a href=mailto:flaviasivm@gmail.com" Target="_blank">e-mail</a>! </p>
