@@ -21,7 +21,7 @@ header{
 #home:before {
     content: '';
     position: fixed;
-    height: 98px;
+    height: 100px;
     left: 0;
     right: 0;
     width: 2900px;
@@ -96,7 +96,7 @@ header{
     
 .btn-toggle {
     position:absolute;
-    top:5%;
+    top: 0;
     right: 5%;
     display:none;
     flex-direction:column;
@@ -115,7 +115,7 @@ header{
 @media only screen and (max-width: 1068px) {
     .btn-toggle {
     display:flex;
-    margin-top:5%;
+    margin-top: 32px;
     }    
     .menu-links {
     display:none;
@@ -128,12 +128,12 @@ header{
     padding:2px 48px;
     }
     #home {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        max-width: 1200px;
-        margin: auto;
-        height: auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    height: 95px;
     }    
     .menu-links a {
     display: block;
@@ -146,7 +146,7 @@ header{
     display: none;
     }
     .menu-logo img {
-        z-index: 1;
+    z-index: 1;
     width:100%;
     height: 50px;
     }
@@ -155,7 +155,13 @@ header{
 }
 
 
-.container{
+:root {
+    --swiper-navigation-color: #fff;
+    --swiper-pagination-color: #333333cc;
+    --swiper-pagination-bullet-width: 10px;
+    --swiper-pagination-bullet-height: 10px;
+}
+swiper-container{
     position: relative;
     width: 100%;
     max-width: 2900px;
@@ -165,14 +171,14 @@ header{
     overflow: hidden;
     scroll-behavior: smooth;
 }
-.slider-wrapper{
+swiper-container{
     display: flex;
     overflow-x:hidden;
     scroll-snap-type:x mandatory;
     scroll-behavior:smooth;
     scrollbar-width:0;
 }
-.slider{
+swiper-slide{
     background-color: #6A468C;
     flex: 1 0 100%;
     position:relative;
@@ -193,7 +199,7 @@ user-select:none
 scroll-behavior:smooth
 }
 
-.slider img{
+swiper-slide img{
     display: flex;
     bottom: 0;
     width: 100%;
@@ -204,7 +210,7 @@ scroll-behavior:smooth
     scroll-snap-type:x mandatory;
     scroll-behavior:smooth;
 }
-.slider p, .slider p, .slider p{
+swiper-slide p, swiper-slide p, swiper-slide p{
     position: absolute;
     max-width: 250px;
     top: 20%;
@@ -215,11 +221,11 @@ scroll-behavior:smooth
     font-size: 35px;
     font-weight: 900;
 }
-.slider p span{
+swiper-slide p span{
     font-size: 25px;
     font-weight: 500;
 }
-.slider button{
+swiper-slide button{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -230,10 +236,15 @@ scroll-behavior:smooth
     width: 250px;
     padding: 10px;
 }
-.slider button a{
+swiper-slide button a{
     color: white;
     font-size: 18px;
-    text-decoration: none;}
+    text-decoration: none;
+}
+swiper-container {
+  margin-left: auto;
+  margin-right: auto;
+}
 #arrowSlider{
     position: absolute;
     display: flex;
@@ -270,27 +281,23 @@ scroll-behavior:smooth
     cursor: pointer;
 }
 @media screen and (max-width: 580px) {
-    .slider p{
+    swiper-slide p{
         max-width: 180px;
         top: 10%;
         left: 7%;
         font-size: 18px;
         font-weight: 800;
     }
-    .slider p span{
+    swiper-slide p span{
         font-size: 15px;
         font-weight: 400;
     }
-    .slider button{
+    swiper-slide button{
         margin-top: 15px;
         width: 150px;
         padding: 5px;
     }
-    #btnslider2{
-        margin-top: 10px;
-
-    }
-    .slider button a{
+    swiper-slide button a{
         font-size: 14px;}
     
 }
