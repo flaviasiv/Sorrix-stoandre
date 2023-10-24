@@ -126,6 +126,7 @@ header{
     }    
     .navbar {
     padding:2px 48px;
+    background-color:#6A468C;
     }
     #home {
     display: flex;
@@ -187,17 +188,6 @@ swiper-slide{
     cursor: grab;
     align-content:center;
 }
-.slider-wrapper::-webkit-scrollbar {
-display:none
-}
-.slider-wrapper.dragging .slider img {
-cursor:grab;
-user-select:none
-}
-
-.slider-wrapper.no-transition {
-scroll-behavior:smooth
-}
 
 swiper-slide img{
     display: flex;
@@ -244,41 +234,6 @@ swiper-slide button a{
 swiper-container {
   margin-left: auto;
   margin-right: auto;
-}
-#arrowSlider{
-    position: absolute;
-    display: flex;
-    top: 50%;
-    cursor: pointer;
-}
-.prev{
-    left: 5%;
-}
-.next{
-    right: 5%;
-}
-.slider-nav{
-    display: flex;
-    column-gap: 0.9rem;
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-}
-.slider-nav a{
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: 50%;
-    background-color: #B96FFF;
-    opacity: 0.75;
-    transition: opacity ease 2s;
-}
-
-.slider-nav a:hover{
-    opacity: 1;
-    background-color: #FFF;
-    cursor: pointer;
 }
 @media screen and (max-width: 580px) {
     swiper-slide p{
@@ -469,12 +424,14 @@ swiper-container {
     font-size: 18px;
     font-weight: 700;
     font-style: normal;
+    text-align: center;
 }
 .textdiferenciais h5 span{
     font-size: 48px;
     font-weight: 700;
     font-style: normal;
     color: #fff;
+    text-align: center;
 }
 .textdiferenciais p{
     font-size: 18px;
@@ -483,6 +440,7 @@ swiper-container {
     color: #fff;
     padding-top: 20px;
     line-height: 1.5;
+    text-align: center;
 }
 .griddiferenciais{
     display: grid;
@@ -952,11 +910,17 @@ swiper-container {
     margin-right: 8px;
 }
 @media screen and (max-width: 700px) {
+    .contato ul li a{
+        margin-left: auto;
+        margin-right: auto;
+    }
     .contato{
         flex-direction: column;
         padding: 50px 19px;
+        text-align: center;
     }
     .contato iframe{
+        padding-top: 10px;
         align-items: center;
         justify-content: center;
         max-width: 350px;
@@ -965,27 +929,35 @@ swiper-container {
 }
 
 footer{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     max-width: 2990px;
     margin: auto;
+    height: 380px;
     background-color: #6A468C;
     color: #FFF;
 }
 .footercontainer{
+    display: flex;
+    justify-content: space-between;
     width: 100%;
     max-width: 1200px;
     margin: auto;
     display: flex;
 }
 .footercontainer .logo{
+    display: block;
+    margin-top: auto;
     width: 250px;
     margin: auto;
-    height: 380px;
     padding: 40px 10px 40px 0;
 }
 .footercontainer .logo img{
+    top: 0;
     width: 250px;
-    height: auto;
 }
 .footercontainer .logo p{
     line-height: 1.5;
@@ -993,7 +965,6 @@ footer{
 }
 .footercontainer .menufooter{
     width: 200px;
-    height: 380px;
     margin: auto;
     justify-content: space-between;
     padding: 40px 10px 40px 10px;
@@ -1024,7 +995,6 @@ footer{
 }
 .contatofooter{
     width: 250px;
-    height: 320px;
     margin: auto;
     justify-content: space-between;
     padding: 40px 10px 40px 10px;
@@ -1041,7 +1011,6 @@ footer{
     width: 290px;
     justify-content: right;
     margin: auto;
-    height: 300px;
 }
 #form {
     width: 100%;
@@ -1074,6 +1043,10 @@ footer{
 
 }
 @media screen and (max-width: 750px) {
+    footer{
+        text-align: center;
+    height: 895px;
+    }
     .footercontainer{
         flex-direction: column;
     }
@@ -1107,6 +1080,7 @@ footer{
         margin: 0 auto;
         justify-content: center;
         align-items: center;
+        padding-bottom: 20px;
 
     }
 }
