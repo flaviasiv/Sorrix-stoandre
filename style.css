@@ -152,9 +152,6 @@ header{
     height: 50px;
     }
 }
-@media screen and (max-width: 600px) {
-}
-
 
 :root {
     --swiper-navigation-color: #fff;
@@ -200,7 +197,7 @@ swiper-slide img{
     scroll-snap-type:x mandatory;
     scroll-behavior:smooth;
 }
-swiper-slide p, swiper-slide p, swiper-slide p{
+swiper-slide p{
     position: absolute;
     max-width: 250px;
     top: 20%;
@@ -237,7 +234,7 @@ swiper-container {
   margin-left: auto;
   margin-right: auto;
 }
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 880px) {
     swiper-slide p{
         max-width: 180px;
         top: 10%;
@@ -255,8 +252,20 @@ swiper-container {
         padding: 5px;
     }
     swiper-slide button a{
-        font-size: 14px;}
-    
+        font-size: 14px;
+    }
+    .slider2 p{
+        max-width:250px;
+        left: 8%;
+        top: 2%;
+    }
+    .slider2 p span{
+        font-size: 16px;
+    }
+    .slider2 button{
+        width: 190px;
+        margin-top: 10px;
+    }
 }
 
 #tratamentos{
@@ -1047,7 +1056,7 @@ footer{
 @media screen and (max-width: 750px) {
     footer{
         text-align: center;
-    height: 895px;
+    height: 950px;
     }
     .footercontainer{
         flex-direction: column;
