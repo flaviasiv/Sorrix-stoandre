@@ -168,6 +168,7 @@ swiper-container{
     align-content: end;
     overflow: hidden;
     scroll-behavior: smooth;
+    margin-top: 90px;
 }
 swiper-container{
     display: flex;
