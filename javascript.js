@@ -1,10 +1,25 @@
 //navlinks menu mobile
-const toggleButton = document.getElementsByClassName('btn-toggle')[0]
-const navbarLinks = document.getElementsByClassName('menu-links')[0]
+// const toggleButton = document.getElementsByClassName('btn-toggle')[0]
+// const navbarLinks = document.getElementsByClassName('menu-links')[0]
 
-toggleButton.addEventListener('click', () => {
-  navbarLinks.classList.toggle('active')
-})
+// toggleButton.addEventListener('click', () => {
+//   navbarLinks.classList.toggle('active')
+// })
+
+let menu_icon_box = document.querySelector(".btn-toggle");
+let box = document.querySelector(".menu-links");
+
+menu_icon_box.onclick = function(){
+    menu_icon_box.classList.toggle("active");
+    box.classList.toggle("active_box");
+}
+document.onclick = function(e){
+    if (!menu_icon_box.contains(e.target) && !box.contains(e.target) ) {
+        menu_icon_box.classList.remove("active");
+        box.classList.remove("active_box");
+    }
+}
+
 
 //slider2
 const slider = document.querySelector(".carousel"),
