@@ -4,12 +4,13 @@
     box-sizing: border-box;
 }
 html{
-    scroll-behavior: smooth;}
+    scroll-behavior: smooth;
+    scroll-padding-top: 30px;
+}
 
 body {
     font-family: 'Carme', sans-serif;
 }
-  
 header{
     display: flex;
     height: auto;
@@ -738,6 +739,7 @@ swiper-container {
     justify-content: center;
     padding-top: 30px;
 }
+
 .sliders3{
     display: flex;
     flex-wrap:wrap;
@@ -829,10 +831,13 @@ swiper-container {
     }    
 }
 #sobre{
+    position: relative;
     width: 100%;
     max-width: 2990px;
     margin: auto;
     background-color: #6A468C;
+    margin-top: -49px;
+    z-index: 9;
 }
 .sobre{
     color: #fff;
