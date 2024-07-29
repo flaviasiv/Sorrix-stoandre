@@ -178,8 +178,8 @@ position: absolute;
     .logow{
     z-index: 9;
     display:block;
-    width: 90px;
-    top: 13px;
+    width: 120px;
+    top: 15px;
     left: 25px;
     position: absolute;
     }
@@ -294,7 +294,7 @@ position: absolute;
     margin-top: 0;
     backdrop-filter: none;
     background-color: #6A468C;
-    border-radius: 0;
+    height: 80px;
   }
   #home {
   display:flex;
@@ -302,7 +302,8 @@ position: absolute;
   max-width: 1400px;
   text-align: right;
   align-items: end;
-  }   
+  height: 80px;    
+}   
 }
 :root {
     --swiper-navigation-color: #fff;
@@ -391,6 +392,9 @@ swiper-container {
   margin-right: auto;
 }
 @media screen and (max-width: 880px) {
+    swiper-container{
+        margin-top: 80px;
+    }
     swiper-slide p{
         max-width: 180px;
         top: 10%;
